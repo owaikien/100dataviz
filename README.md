@@ -1,5 +1,5 @@
 # 100daysdataviz
-Creating visualization of random and interesting stuffs for 100 consecutive days.
+Creating 100 visualizations of random and interesting stuffs.
 
 | Date | Day | Title |
 | ------------ | ----- | ------------------ |
@@ -11,3 +11,5 @@ Creating visualization of random and interesting stuffs for 100 consecutive days
 | 24-6-2023 | 6 | Avocado Prices and Volume Sold in US |
 | 25-6-2023 | 7 | League of Legends S12 Stats |
 | 26-6-2023 | 8 | Percentage Returns for BTC and SPX500 |
+| 31-7-2023 | 9 | Market Capitalization of Risk Assets |
+
