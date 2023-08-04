@@ -12,4 +12,5 @@ Creating 100 visualizations of random and interesting stuffs.
 | 25-6-2023 | 7 | League of Legends S12 Stats |
 | 26-6-2023 | 8 | Percentage Returns for BTC and SPX500 |
 | 31-7-2023 | 9 | Market Capitalization of Risk Assets |
+| 04-8-2023 | 10 | The Economic Impact of Historical Events |
 
