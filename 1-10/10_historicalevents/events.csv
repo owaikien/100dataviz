@@ -1,0 +1,29 @@
+Events,Year,Cost (billions $USD),Category,Duration (days)
+Chernobyl Disaster,1986,854,Disasters,10
+2011 Tohoku Earthquake and Tsunami,2011,468,Disasters,0.004
+Great Hansin Earthquake,1995,378,Disasters,0.0002
+2008 Sichuan Earthquake,2008,201,Disasters,0.001
+Hurricane Katrina,2005,187,Disasters,9
+COVID-19,2020,14000,Global Pandemic,1354
+SARS,2003,66,Global Pandemic,231
+HIV/AIDS,1981,840,Global Pandemic,15392
+Swine Flu,2009,71,Global Pandemic,10
+Ebola,2014,42,Global Pandemic,761
+Zika,2015,16,Global Pandemic,611
+1929 Stock Market Crash,1929,18,Economic Bubble,5
+Dot Com Bubble,1996,8850,Economic Bubble,2192
+2008 US Housing Crash,2008,13100,Economic Bubble,574
+1989 Japanese Asset Price Bubble,1989,4900,Economic Bubble,1826
+2021 Bitcoin Crash,2021,2000,Economic Bubble,182
+Cold War,1940,25200,War,16360
+World War II,1942,4700,War,2194
+World War I,1914,3300,War,1567
+War of 1812,1812,2800,War,986
+Afghanistan War ,2001,2300,War,7305
+Russia-Ukraine War,2022,3000,War,524
+Project Apollo,1960,257,Exploration and Discoveries,3883
+International Space Station,1998,280,Exploration and Discoveries,3650
+Space Shuttle Program,2010,292,Exploration and Discoveries,10597
+MH370 Search,2014,0.16,Dissapearances,52
+Titanic Search,1909,0.2,Dissapearances,26801
+Titan Search,2023,0.0012,Dissapearances,5

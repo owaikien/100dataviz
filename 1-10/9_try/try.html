@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+
+    <style>
+        .bar{
+            fill: steelblue;
+        }
+
+        .bar:hover{
+            fill:brown;
+        }
+
+        .axis--x path{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<script>
+    let data = [
+       {country:'Lebanon', rate: 260},
+       {country:'Syria', rate: 139},
+       {country:'Argentina', rate: 114},
+       {country:'Türkiye', rate: 39.59},
+       {country:'Pakistan', rate: 38},
+       {country:'Egypt', rate: 32.7}, 
+       {country:'Nigeria', rate: 22.4},
+       {country:'Kazakhstan', rate: 15.9},
+       {country:'Ukraine', rate: 15.3},
+       {country:'Poland', rate: 11.5},
+       {country:'Sweden', rate: 9.7},
+       {country:'UK', rate: 8.7},
+       {country:'Austria', rate: 8},
+       {country:'Kenya', rate: 7.9},
+       {country:'Australia', rate: 7},
+       {country:'Norway', rate: 6.7},
+       {country:'Ireland', rate: 6.6},
+       {country:'Italy', rate: 6.4},
+       {country:'Germany', rate: 6.4},
+       {country:'South Africa', rate: 6.3},
+       {country:'Philippines', rate: 6.1},
+       {country:'Mexico', rate: 5.84},
+       {country:'Netherlands', rate: 5.7},
+       {country:'Singapore', rate: 5.1},
+       {country:'Israel', rate: 4.6},
+       {country:'France', rate: 4.5},
+       {country:'India', rate: 4.25},
+       {country:'Indonesia', rate: 4}, 
+       {country:'USA', rate: 4},
+       {country:'Brazil', rate: 3.94},
+       {country:'Canada', rate: 3.4},
+       {country:'South Korea', rate: 3.3},
+       {country:'Japan', rate: 3.2},
+       {country:'UAE', rate: 3.05},
+       {country:'Denmark', rate: 2.9},
+       {country:'Saudi Arabia', rate: 2.8}, 
+       {country:'Russia', rate: 2.5},
+       {country:'Switzerland', rate:  2.2},
+       {country:'Spain', rate: 1.9},
+       {country:'Thailand', rate: 0.53},
+       {country:'Niger', rate: 0.2},
+       {country:'China', rate: 0.2},
+       {country:'Afghanistan', rate: -1},
+       {country:'Seychelles', rate: -1.02}
+    ];
+
+let svg = d3.select('body').append('svg')
+    .attr("width", 960)
+    .attr("height", 500),
+    margin = {top: 20, right: 20, bottom:30, left: 40},
+    width = +svg.attr("width") - margin.left - margin.right,
+    height = +svg.attr("height") - margin.top - margin.bottom
+    g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    let x = d3.scaleBand()
+    .rangeRound([0, width])
+    .paddingInner(0.05)
+    .align(0.1);
+
+    let y = d3.scaleLinear()
+        .rangeRound([height, 0]);
+
+    let z = d3.scaleOrdinal()
+        .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+
+    x.domain(data.map(function(d) { return d.country; }));
+    y.domain([0, d3.max(data, function(d) { return d.rate; })]);
+
+    g.append("g")
+        .attr("class", "axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(x));
+
+    g.append("g")
+        .attr("class", "axis")
+        .call(d3.axisLeft(y).ticks(null, "s"))
+    .append("text")
+        .attr("x", 2)
+        .attr("y", y(y.ticks().pop()) + 0.5)
+        .attr("dy", "0.32em")
+        .attr("fill", "#000")
+        .attr("font-weight", "bold")
+        .attr("text-anchor", "start")
+        .text("Inflation Rate");
+
+    g.selectAll(".bar")
+    .data(data)
+    .enter().append("rect")
+        .attr("class", "bar")
+        .attr("x", function(d) { return x(d.country); })
+        .attr("y", function(d) { return y(d.rate); })
+        .attr("width", x.bandwidth())
+        .attr("height", function(d) { return height - y(d.rate); })
+        .attr("fill", function(d) { return z(d.rate); });
+</script>
+</body>
+</html>
