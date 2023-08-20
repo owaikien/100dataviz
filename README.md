@@ -14,6 +14,7 @@ Creating 100 visualizations of random and interesting stuffs.
 | 31-7-2023 | 9 | Market Capitalization of Risk Assets |
 | 04-8-2023 | 10 | The Economic Impact of Historical Events |
 | 15-8-2023 | 11 | Smartphone Analysis |
+| 20-8-2023 | 12 | Apple Devices Usage Patterns |
 
 --- 
 
